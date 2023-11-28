@@ -7,9 +7,9 @@ add_compile_options(-Wall -Wextra -Werror=all -g)
 
 add_library(ncurses STATIC IMPORTED)
 set_property(TARGET ncurses PROPERTY
-             IMPORTED_LOCATION "./ncurses-6.2/install/lib/libncurses.a")
+             IMPORTED_LOCATION "./ncurses-6.2/myinstall/lib/libncurses.a")
 
-include_directories(BEFORE SYSTEM ./ncurses-6.2/install/include)
+include_directories(BEFORE SYSTEM ./ncurses-6.2/myinstall/include)
 
 add_executable(ncurses_test ncurses_test.cpp)
 target_link_libraries(ncurses_test ncurses)
